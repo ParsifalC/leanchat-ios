@@ -57,7 +57,7 @@
         NSMutableArray *memberIds = [NSMutableArray array];
         [memberIds addObject:groupId1];
         [memberIds addObject:groupId2];
-        [memberIds addObject:[CDChatManager manager].selfId];
+        [memberIds addObject:[CDChatManager manager].clientId];
         [[CDChatManager manager] fetchConversationWithMembers:memberIds callback: ^(AVIMConversation *conversation, NSError *error) {
             if (error) {
                 DLog(@"%@", error);
